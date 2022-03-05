@@ -1,0 +1,19 @@
+# ********************************************************* Scenario: Install Puppet Agent *********************************************************
+
+The Nautilus DevOps team to would like to set up a Puppet agent mode to manage their infrastructure in Stratos DC. For testing they are trying to install and set up Puppet agent package on App Server 3. Please find below more details about the task to proceed further.
+
+Install puppet agent on App Server 3 also start its service.
+
+---------------------------------------------------------------------------------------------------------------
+Solution:
+
+1. Enable puppet repo and install puppet-agent
+sudo rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+sudo yum install puppet-agent -y
+
+2. Start the puppet agent: 
+sudo systemctl start puppet
+
+3.Verify that the puppet service has started: 
+sudo systemctl status puppet
+
